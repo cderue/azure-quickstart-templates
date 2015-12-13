@@ -28,9 +28,9 @@
     },
     "zendServerVersion": {
       "type": "string",
-      "defaultValue": "zs-d-00-u-php5_6:8.5.00",
+      "defaultValue": "zs-d-00-u-php5_6",
       "allowedValues": [
-        "zs-d-00-u-php5_6:8.5.00"
+        "zs-d-00-u-php5_6"
       ],
       "metadata": {
         "description": "The Zend Server version for the VM."
@@ -147,8 +147,8 @@
           "imageReference": {
             "publisher": "[variables('imagePublisher')]",
             "offer": "[variables('imageOffer')]",
-            "sku": "[parameters('ubuntuOSVersion')]",
-            "version": "latest"
+            "sku": "[parameters('zendServerVersion')]",
+            "version": "8.5.1"
           },
           "osDisk": {
             "name": "osdisk",
