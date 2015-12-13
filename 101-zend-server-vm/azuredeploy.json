@@ -35,7 +35,14 @@
       "metadata": {
         "description": "The Zend Server version for the VM."
       }
-    }
+    },
+    "vmSize": {
+            "type": "string",
+            "defaultValue": "Standard_A0",
+            "metadata": {
+                "description": "Size of the VM"
+            }
+        },
   },
   "variables": {
     "location": "West US",
