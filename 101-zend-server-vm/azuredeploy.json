@@ -26,24 +26,22 @@
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
     },
-    "ubuntuOSVersion": {
+    "zendServerVersion": {
       "type": "string",
-      "defaultValue": "14.04.2-LTS",
+      "defaultValue": "zs-d-00-u-php5_6:8.5.00",
       "allowedValues": [
-        "12.04.5-LTS",
-        "14.04.2-LTS",
-        "15.04"
+        "zs-d-00-u-php5_6:8.5.00"
       ],
       "metadata": {
-        "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values: 12.04.5-LTS, 14.04.2-LTS, 15.04."
+        "description": "The Zend Server version for the VM."
       }
     }
   },
   "variables": {
     "location": "West US",
-    "imagePublisher": "Canonical",
-    "imageOffer": "UbuntuServer",
-    "OSDiskName": "osdiskforlinuxsimple",
+    "imagePublisher": "zend",
+    "imageOffer": "php-zend-server",
+    "OSDiskName": "osdiskforzs",
     "nicName": "myVMNic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
@@ -52,8 +50,8 @@
     "publicIPAddressName": "myPublicIP",
     "publicIPAddressType": "Dynamic",
     "vmStorageAccountContainerName": "vhds",
-    "vmName": "MyUbuntuVM",
-    "vmSize": "Standard_D1",
+    "vmName": "MyZendServerVM",
+    "vmSize": "Standard_A0",
     "virtualNetworkName": "MyVNET",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]"
