@@ -167,7 +167,7 @@
         "storageProfile": {
           "imageReference": {
             "publisher": "[variables('imagePublisher')]",
-            "offer": "[variables('imageOffer')]",
+            "offer": "php-zend-server",
             "sku": "[variables('imageOffer')]",
             "version": "8.5.1"
           },
