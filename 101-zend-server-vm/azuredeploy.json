@@ -25,7 +25,7 @@
             "metadata": {
                 "description": "VM Size. Select a DS Series VM with at least 14 GB of RAM. Default value: Standard_DS3"
             },
-            "defaultValue": "Standard_DS3",
+            "defaultValue": "Standard_A0",
             "allowedValues": [
                 "Standard_DS3",
                 "Standard_DS4",
@@ -46,7 +46,7 @@
             "metadata": {
                 "description": "Select a data center that supports premium storage"
             },
-            "defaultValue": "Southeast Asia",
+            "defaultValue": "West US",
             "allowedValues": [
                 "West US",
                 "East US 2",
@@ -178,7 +178,7 @@
                         "publisher": "[variables('imagePublisher')]",
                         "offer": "[variables('imageOffer')]",
                         "sku": "[variables('imageOffer')]",
-                        "version": "latest"
+                        "version": "8.5.1"
                     },
                     "osDisk": {
                         "name": "osdisk",
